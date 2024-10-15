@@ -1,0 +1,29 @@
+@media (max-width: 961px) {
+    .bgTwo__house {
+        max-width: 50%;
+    }
+
+    .bgTwo__clouds {
+        top: 23%;
+        right: 45%;
+    }
+
+    .bgTwo__clouds-image {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 561px) {
+    .bgOne__inner {
+        grid-template-columns: 25px 25px;
+    }
+
+    .bgTwo__clouds {
+        top: 31%;
+        right: 45%;
+    }
+
+    .bgTwo__clouds-image {
+        max-width: 35px;
+    }
+}
