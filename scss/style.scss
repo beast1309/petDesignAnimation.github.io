@@ -117,4 +117,214 @@
     display: none;
 }
 
+.about {
+    margin-top: 500px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {}
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+
+        &-images {
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-width: 500px;
+            min-height: 500px;
+
+            &__star {
+                position: absolute;
+                border-radius: 40px;
+                box-shadow: 0px 0px 40px 10px #ffc61b;
+
+                @keyframes pulse {
+                    0% {
+                        -webkit-transform: scale3d(0.5, 0.5, 0.5);
+                        transform: scale3d(0.5, 0.5, 0.5);
+                    }
+
+                    50% {
+                        -webkit-transform: scale3d(1.25, 1.25, 1.25);
+                        transform: scale3d(1.25, 1.25, 1.25);
+                    }
+
+                    to {
+                        -webkit-transform: scale3d(0.5, 0.5, 0.5);
+                        transform: scale3d(0.5, 0.5, 0.5);
+                    }
+                }
+            }
+
+            &__planet {
+                position: absolute;
+                top: 49%;
+                left: 26%;
+
+                @keyframes fadeOutTopLeft {
+                    0% {
+                        opacity: 1;
+                        -webkit-transform: translateZ(0) scale3d(0.1, 0.1, 0.1);
+                        transform: translateZ(0) scale3d(0.1, 0.1, 0.1);
+                    }
+
+                    to {
+                        opacity: 0;
+                        -webkit-transform: translate3d(-200%, -200%, 0) scale3d(1.5, 1.5, 1.5);
+                        transform: translate3d(-200%, -200%, 0) scale3d(1.5, 1.5, 1.5);
+                    }
+                }
+            }
+
+            &__star:nth-child(1) {
+                top: 5%;
+                left: 15%;
+            }
+
+            &__star:nth-child(2) {
+                top: 10%;
+                right: 20%;
+            }
+
+            &__star:nth-child(3) {
+                bottom: 31%;
+                left: 15%;
+            }
+
+            &__star:nth-child(4) {
+                top: 40%;
+                left: 25%;
+            }
+
+            &__star:nth-child(5) {
+                top: 27%;
+                left: 7%;
+            }
+
+            &__star:nth-child(6) {
+                top: 17%;
+                left: 47%;
+            }
+        }
+    }
+
+    &__contentTwo {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+
+        &-images {
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-width: 500px;
+            min-height: 500px;
+
+            &__highlight {
+                position: absolute;
+                border-radius: 40px;
+
+                @keyframes shakeX {
+
+                    0%,
+                    to {
+                        -webkit-transform: translateZ(0);
+                        transform: translateZ(0)
+                    }
+
+                    10%,
+                    30%,
+                    50%,
+                    70%,
+                    90% {
+                        -webkit-transform: translate3d(-1px, 0, 0);
+                        transform: translate3d(-1px, 0, 0);
+                    }
+
+                    20%,
+                    40%,
+                    60%,
+                    80% {
+                        -webkit-transform: translate3d(1px, 0, 0);
+                        transform: translate3d(1px, 0, 0);
+                    }
+                }
+            }
+
+            &__highlight:nth-child(1) {
+                top: 43%;
+                left: 80%;
+                border-radius: none;
+                box-shadow: none;
+            }
+
+            &__highlight:nth-child(2) {
+                top: 48%;
+                left: 38%;
+                border-radius: none;
+                box-shadow: none;
+            }
+
+            &__highlight:nth-child(3) {
+                border-radius: 40px;
+                top: 15%;
+                left: 10%;
+            }
+
+            &__highlight:nth-child(4) {
+                top: 7%;
+                right: 17%;
+            }
+
+            &__highlight:nth-child(5) {
+                top: 41%;
+                left: 6%;
+            }
+
+            &__highlight:nth-child(6) {
+                top: 15%;
+                left: 35%;
+            }
+
+
+            &__rainbow {
+                position: absolute;
+                top: 15px;
+                left: -121px;
+                transform: rotate3d(10, -50, -6, 60deg);
+
+                .line {
+                    stroke-dashoffset: 470;
+                    stroke-dasharray: 470;
+                    animation: animdash 5s infinite 6s;
+                }
+
+                @keyframes animdash {
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+
+            /* &__rainbow {
+
+                &-line {
+                    width: 80px;
+                    height: 80px;
+                    transform: rotate3d(20, -21, 2, 125deg);
+                    border-top-left-radius: 90px;
+                    border-top: 10px solid #f5dbb6;
+                    border-left: 10px solid #f5dbb6;
+                }
+            } */
+        }
+    }
+}
+
 @import 'media';
